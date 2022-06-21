@@ -27,15 +27,114 @@ export default function Home() {
         <View style={styles.line} />
 
         <ScrollView>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>
-            <Products/>
-            <Products/>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg">
+              Abacate
+            </Products>
+            <Products img={require('../../assets/pineapple.jpeg')} cost="R$ 4,79/Unidade">
+              Abacaxi
+            </Products>     
+          </View>
 
-            
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/zucchini.jpeg')} cost="R$ 5,39/Kg">
+              Abobrinha
+            </Products>   
+            <Products img={require('../../assets/yellow_squash.jpeg')} cost="R$ 9,79/kg">
+              Abobrinha Amarela
+            </Products>   
+          </View>          
+          
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/garlic.jpeg')} cost="R$ 19,90/Kg">
+              Alho
+            </Products>   
+            <Products img={require('../../assets/bananas.jpeg')} cost="R$ 3,90/kg">
+              Banana
+            </Products>         
+          </View>
 
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/eggplant.jpeg')} cost="R$ 2,50/kg">
+              Berinjela
+            </Products>  
+            <Products img={require('../../assets/broccoli.jpeg')} cost="R$ 5,90/kg">
+              Brócolis
+            </Products>         
+          </View>
 
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/yellow_onion.jpeg')} cost="R$ 4,49/Kg">
+              Cebola
+            </Products>  
+            <Products img={require('../../assets/red_onion.jpeg')} cost="R$ 5,77/kg">
+              Cebola Roxa
+            </Products>          
           </View>
           
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/whole_carrot.jpeg')} cost="R$ 2,99/kg">
+              Cenoura
+            </Products>
+            <Products img={require('../../assets/cauliflower.jpeg')} cost="R$ 4,90/kg">
+              Couve-Flor
+            </Products>         
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/kiwis.jpeg')} cost="R$ 21,79/Kg">
+              Kiwi
+            </Products>   
+            <Products img={require('../../assets/lemons.jpeg')} cost="R$ 11,40/kg">
+              Limão Siciliano
+            </Products>         
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/fuji_apples.jpeg')} cost="R$ 5,65/kg">
+              Maçã Fuji
+            </Products>
+            <Products img={require('../../assets/watermelon.jpeg')} cost="R$ 2,79/Kg">
+              Melancia
+            </Products>        
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/fresh_corn_cub.jpeg')} cost="R$ 3,40/kg">
+              Milho Verde
+            </Products>
+            <Products img={require('../../assets/fresh_strawberries.jpeg')} cost="R$ 10,90/Caixa">
+              Morango
+            </Products>          
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/cucumber.jpeg')} cost="R$ 2,70/kg">
+              Pepino
+            </Products>
+            <Products img={require('../../assets/green_bell_pepper.jpeg')} cost="R$ 3,20/kg">
+              Pimentão Verde
+            </Products>        
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
+            <Products img={require('../../assets/green_cabbage.png')} cost="R$ 2,90/Kg">
+              Repolho Verde
+            </Products>  
+            <Products img={require('../../assets/tomatoes.jpeg')} cost="R$ 3,99/kg">
+              Tomate
+            </Products>      
+          </View>
+
+          <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingBottom: 40}}>  
+            <Products img={require('../../assets/seedless_grapes.jpeg')} cost="R$ 3,60/Kg">
+              Uva Roxa
+            </Products>  
+            <Products img={require('../../assets/green_seedless_grapes.jpeg')} cost="R$ 5,99/kg">
+              Uva Verde
+            </Products>
+          </View>
+
         </ScrollView>
           
    </View>

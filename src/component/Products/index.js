@@ -1,21 +1,32 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-export default function Products() {
+export default function Products(props) {
+
+ function filterDesc(desc){
+    if(desc.length < 27) {
+        return desc;
+    }
+
+    return `${desc.substring(0, 23)}...`;
+ }
+
+
  return (
    <TouchableOpacity style={styles.container}>
         <Image
-            source={require('../../assets/avocados.jpeg')}
+            source={props.img}
             style={styles.productsImg}
         />
 
         <Text style={styles.productText}>
-            Abacate
+            {filterDesc(props.children)}
         </Text>
 
-        <Text style={styles.productText}>
-            R$ 9,90/kg
-        </Text>
+        <View opacity={0.4}>
+            <Text style={styles.productText}> {props.cost}</Text>
+        </View>
+            
    </TouchableOpacity>
   );
 }
@@ -28,7 +39,12 @@ const styles = StyleSheet.create({
     },
 
     productsImg: {
-        width: 175,
-        height: 175,
+        width: 170,
+        height: 170,
+    },
+
+    productText: {
+        fontSize: 16, 
+        fontWeight: 'bold'
     }
 })
