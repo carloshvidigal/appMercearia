@@ -1,10 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'
 
 import Products from '../../component/Products';
 
 export default function Home() {
+
+const navigation = useNavigation();
+
  return (
    <View style={styles.container}>
     <View style={styles.header}>
@@ -28,7 +32,7 @@ export default function Home() {
 
         <ScrollView>
           <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
-            <Products img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg">
+            <Products img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg" onClick={()=> navigation.navigate('Detail') }>
               Abacate
             </Products>
             <Products img={require('../../assets/pineapple.jpeg')} cost="R$ 4,79/Unidade">

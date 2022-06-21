@@ -13,7 +13,7 @@ export default function Products(props) {
 
 
  return (
-   <TouchableOpacity style={styles.container}>
+   <TouchableOpacity style={styles.container} onPress={props.onClick}>
         <Image
             source={props.img}
             style={styles.productsImg}
