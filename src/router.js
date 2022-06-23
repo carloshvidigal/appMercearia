@@ -7,6 +7,7 @@ import { TouchableOpacity } from "react-native";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,12 @@ function Routes(){
                     name='Home'
                     component={Home}
                     options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="Cadastro"
+                    component={Cadastro}
+                    options={{ headerShown: true }}
                 />
                 <Stack.Screen 
                     name='Detail'
