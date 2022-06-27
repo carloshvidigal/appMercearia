@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
 
 import QuantityItens from '../../component/QuantityItens';
 import Button from '../../component/Button';
@@ -7,7 +7,7 @@ import Button from '../../component/Button';
 export default function Detail({ navigation }) {
 
   navigation.setOptions({
-    headerTitle: 'videoYoutube'
+    headerTitle: 'Detalhes'
   })
  return (
    <ScrollView style={styles.container}>
@@ -26,14 +26,15 @@ export default function Detail({ navigation }) {
           <Text style={styles.title}>Abacate da terra </Text>
         </View>
 
+        <View style={styles.container}>
+      <TextInput 
+      style = {styles.input}
+      placeholder='quantidade'
+      autoCorrect={false}
+      keyboardType="numeric"
+      //onChangeText={value => setEmail(value)}
+      />
 
-        <View style={{flexDirection: 'row', width: '100%'  }}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <QuantityItens bgcolor="#17181a" color="#fff">40</QuantityItens>
-            <QuantityItens>37</QuantityItens>
-            <QuantityItens>40</QuantityItens>
-            <QuantityItens>44</QuantityItens>
-          </ScrollView>
         </View>
 
         <Button/>
@@ -58,5 +59,14 @@ const styles = StyleSheet.create ({
     paddingHorizontal: '2%',
     fontSize: 30
     
+  },
+  input: {
+    backgroundColor: "#BEEBC9",
+    width: '90%',
+    marginBottom: 15,
+    color: '#222',
+    fontSize: 22,
+    borderRadius: 7,
+    padding: 10
   }
 })
