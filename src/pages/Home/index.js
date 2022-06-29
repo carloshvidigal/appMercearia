@@ -4,6 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
 import Products from '../../component/Products';
+import { TextInput } from 'react-native-gesture-handler';
 
 export default function Home() {
 
@@ -32,7 +33,7 @@ const navigation = useNavigation();
 
         <ScrollView>
           <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
-            <Products img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg" onClick={()=> navigation.navigate('Detail') }>
+            <Products img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg" >
               Abacate
             </Products>
             <Products img={require('../../assets/pineapple.jpeg')} cost="R$ 4,79/Unidade">

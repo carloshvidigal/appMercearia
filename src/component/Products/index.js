@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 
 export default function Products(props) {
 
@@ -13,7 +14,7 @@ export default function Products(props) {
 
 
  return (
-   <TouchableOpacity style={styles.container} onPress={props.onClick}>
+   <View style={styles.container} onPress={props.onClick}>
         <Image
             source={props.img}
             style={styles.productsImg}
@@ -26,8 +27,11 @@ export default function Products(props) {
         <View opacity={0.4}>
             <Text style={styles.productText}> {props.cost}</Text>
         </View>
+        <View>
+            <TextInput>quantidade</TextInput>
+        </View>
             
-   </TouchableOpacity>
+   </View>
   );
 }
 
