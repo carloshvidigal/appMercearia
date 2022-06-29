@@ -1,8 +1,12 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+
+import { useCart } from '../../context/cart';
 
 export default function Products(props) {
+
+    const { add } = useCart()
+
 
  function filterDesc(desc){
     if(desc.length < 27) {
@@ -14,7 +18,7 @@ export default function Products(props) {
 
 
  return (
-   <View style={styles.container} onPress={props.onClick}>
+   <TouchableOpacity onPress={() => add(props)} style={styles.container}>
         <Image
             source={props.img}
             style={styles.productsImg}
@@ -27,11 +31,7 @@ export default function Products(props) {
         <View opacity={0.4}>
             <Text style={styles.productText}> {props.cost}</Text>
         </View>
-        <View>
-            <TextInput>quantidade</TextInput>
-        </View>
-            
-   </View>
+   </TouchableOpacity>
   );
 }
 

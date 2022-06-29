@@ -4,11 +4,16 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
 import Products from '../../component/Products';
-import { TextInput } from 'react-native-gesture-handler';
 
 export default function Home() {
 
 const navigation = useNavigation();
+
+
+const entrarCart = () => {
+  navigation.navigate("Cart");
+  
+}
 
  return (
    <View style={styles.container}>
@@ -20,9 +25,9 @@ const navigation = useNavigation();
       
       <View style={styles.textContainer}>
         <Text style={styles.text}>Produtos</Text>
-        <TouchableOpacity style={{position:'absolute', right:0, alignSelf: 'center'}}>
+        <TouchableOpacity style={{position:'absolute', right:0, alignSelf: 'center'}} onPress={() => entrarCart()}>
           <MaterialIcons 
-            name='filter-list'
+            name='shopping-cart'
             size={24}
             color='#595B59'
           />
@@ -33,7 +38,7 @@ const navigation = useNavigation();
 
         <ScrollView>
           <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>  
-            <Products img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg" >
+            <Products id = "1" name ="Abacate" img={require('../../assets/avocados.jpeg')} cost="R$ 9,90/kg">
               Abacate
             </Products>
             <Products img={require('../../assets/pineapple.jpeg')} cost="R$ 4,79/Unidade">

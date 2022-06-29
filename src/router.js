@@ -5,15 +5,18 @@ import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from "react-native";
 
 import Home from "./pages/Home";
-import Detail from "./pages/Detail";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
+import Cart from "./pages/Cart";
+import CartProvider from "./context/cart";
 
 const Stack = createStackNavigator();
 
 function Routes(){
     return(
-        <NavigationContainer>
+        
+        <CartProvider>
+            <NavigationContainer>
             <Stack.Navigator>
            
                <Stack.Screen
@@ -33,24 +36,20 @@ function Routes(){
                     component={Cadastro}
                     options={{ headerShown: true }}
                 />
-                <Stack.Screen 
-                    name='Detail'
-                    component={Detail}
-                    options={{
-                        headerRight: () => (
-                            <TouchableOpacity style={{marginRight: 15}}>
-                                <Feather
-                                name="shopping-cart"
-                                size={24}
-                                color="black"
-                                />
-                            </TouchableOpacity>
 
-                        )
-              }}
+                <Stack.Screen
+                    name='Cart'
+                    component={Cart}
+                    options={{ headerShown: true }}
                 />
+
             </Stack.Navigator>
         </NavigationContainer>
+        </CartProvider>
+        
+        
+        
+
     )
 
 }
